@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Bede Kelly - Some Kid]]></title><description><![CDATA[Thoughts, stories and ideas.]]></description><link>http://mains.120v.ac/</link><generator>Ghost 0.5</generator><lastBuildDate>Fri, 23 Jan 2015 02:38:04 GMT</lastBuildDate><atom:link href="http://mains.120v.ac/author/bede/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Interactive Fiction - Initial Thoughts]]></title><description><![CDATA[<p>After reading Ready Player One, I'm hyped up for open-world interactive gaming. I don't give a monkey's about the interface; to me, the permissive nature of the game's world is the important thing. I want it to be as easy as possible to expand: patch in new items, vehicles, quests, you name it.</p>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Bede Kelly - bede kelly]]></title><description><![CDATA[probably something about programming.]]></description><link>http://mains.120v.ac/</link><generator>Ghost 0.5</generator><lastBuildDate>Fri, 23 Jan 2015 02:50:09 GMT</lastBuildDate><atom:link href="http://mains.120v.ac/author/bede/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Interactive Fiction - Initial Thoughts]]></title><description><![CDATA[<p>After reading Ready Player One, I'm hyped for open-world gaming. Stories, interactions, quests, worlds, planets, all of that good stuff. I think I'll make one for myself.</p>
+
+<p>I don't care much about the interface; to me, the permissive nature of the game's world is the important thing. I want it to be as easy as possible to expand: patch in new items, vehicles, quests, you name it.</p>
 
 <p>My idea, eventually, is to write something like an interactive text fiction game: check out <a href="http://www.web-adventures.org/cgi-bin/webfrotz?s=Zork1&amp;t=Y">Zork</a> if you haven't seen this kind of thing before, it's way cool. </p>
 
@@ -26,69 +28,4 @@
 
 <h3 id="implementation">Implementation</h3>
 
-<p>I'm hoping to use some kind of client-server model for this game. It's not going to be multiplayer - at least, not in the forseeable future - but it should have some kind of time simulation. This will probably be implemented using threads. The server and client will have two message pipes between them - the server will read/lex/parse/execute the client's messages, and send back messages which the client prints. The server may also be running other threads, which have access to the out-pipe but not the in-pipe, and therefore can send messages to the client (e.g. hunger warnings, environment events). It'll almost definitely have some kind of system for 'ticks', or arbitrary small units of time. The server will hold all of the information about the player in state, and the goal will be to achieve "separation of concerns" (ew) such that multiple save slots will be available, indexed by player name.</p>]]></description><link>http://mains.120v.ac/parsing-and-lexing-from-scratch/</link><guid isPermaLink="false">dec841ef-ad5f-4339-aadb-6ee5327ab8c0</guid><category><![CDATA[Fiction]]></category><category><![CDATA[Game]]></category><category><![CDATA[Parsing]]></category><category><![CDATA[NLP]]></category><dc:creator><![CDATA[Bede Kelly]]></dc:creator><pubDate>Fri, 23 Jan 2015 02:31:39 GMT</pubDate></item><item><title><![CDATA[Welcome to Ghost]]></title><description><![CDATA[<p>You're live! Nice. We've put together a little post to introduce you to the Ghost editor and get you started. You can manage your content by signing in to the admin area at <code>&lt;your blog URL&gt;/ghost/</code>. When you arrive, you can select this post from a list on the left and see a preview of it on the right. Click the little pencil icon at the top of the preview to edit this post and read the next section!</p>
-
-<h2 id="gettingstarted">Getting Started</h2>
-
-<p>Ghost uses something called Markdown for writing. Essentially, it's a shorthand way to manage your post formatting as you write!</p>
-
-<p>Writing in Markdown is really easy. In the left hand panel of Ghost, you simply write as you normally would. Where appropriate, you can use <em>shortcuts</em> to <strong>style</strong> your content. For example, a list:</p>
-
-<ul>
-<li>Item number one</li>
-<li>Item number two
-<ul><li>A nested item</li></ul></li>
-<li>A final item</li>
-</ul>
-
-<p>or with numbers!</p>
-
-<ol>
-<li>Remember to buy some milk  </li>
-<li>Drink the milk  </li>
-<li>Tweet that I remembered to buy the milk, and drank it</li>
-</ol>
-
-<h3 id="links">Links</h3>
-
-<p>Want to link to a source? No problem. If you paste in a URL, like <a href="http://ghost.org/">http://ghost.org</a> - it'll automatically be linked up. But if you want to customise your anchor text, you can do that too! Here's a link to <a href="http://ghost.org/">the Ghost website</a>. Neat.</p>
-
-<h3 id="whataboutimages">What about Images?</h3>
-
-<p>Images work too! Already know the URL of the image you want to include in your article? Simply paste it in like this to make it show up:</p>
-
-<p><img src="https://ghost.org/images/ghost.png" alt="The Ghost Logo"></p>
-
-<p>Not sure which image you want to use yet? That's ok too. Leave yourself a descriptive placeholder and keep writing. Come back later and drag and drop the image in to upload:</p>
-
-<h3 id="quoting">Quoting</h3>
-
-<p>Sometimes a link isn't enough, you want to quote someone on what they've said. It was probably very wisdomous. Is wisdomous a word? Find out in a future release when we introduce spellcheck! For now - it's definitely a word.</p>
-
-<blockquote>
-  <p>Wisdomous - it's definitely a word.</p>
-</blockquote>
-
-<h3 id="workingwithcode">Working with Code</h3>
-
-<p>Got a streak of geek? We've got you covered there, too. You can write inline <code>&lt;code&gt;</code> blocks really easily with back ticks. Want to show off something more comprehensive? 4 spaces of indentation gets you there.</p>
-
-<pre><code>.awesome-thing {
-    display: block;
-    width: 100%;
-}
-</code></pre>
-
-<h3 id="readyforabreak">Ready for a Break?</h3>
-
-<p>Throw 3 or more dashes down on any new line and you've got yourself a fancy new divider. Aw yeah.</p>
-
-<hr>
-
-<h3 id="advancedusage">Advanced Usage</h3>
-
-<p>There's one fantastic secret about Markdown. If you want, you can write plain old HTML and it'll still work! Very flexible.</p>
-
-<p><input type="text" placeholder="I'm an input field!"></p>
-
-<p>That should be enough to get you started. Have fun - and let us know what you think :)</p>]]></description><link>http://mains.120v.ac/welcome-to-ghost/</link><guid isPermaLink="false">1f15e8be-2bbf-4ef8-9bd0-a0bbc4e9bde3</guid><category><![CDATA[Getting Started]]></category><dc:creator><![CDATA[Bede Kelly]]></dc:creator><pubDate>Fri, 23 Jan 2015 01:40:21 GMT</pubDate></item></channel></rss>
+<p>I'm hoping to use some kind of client-server model for this game. It's not going to be multiplayer - at least, not in the forseeable future - but it should have some kind of time simulation. This will probably be implemented using threads. The server and client will have two message pipes between them - the server will read/lex/parse/execute the client's messages, and send back messages which the client prints. The server may also be running other threads, which have access to the out-pipe but not the in-pipe, and therefore can send messages to the client (e.g. hunger warnings, environment events). It'll almost definitely have some kind of system for 'ticks', or arbitrary small units of time. The server will hold all of the information about the player in state, and the goal will be to achieve "separation of concerns" (ew) such that multiple save slots will be available, indexed by player name.</p>]]></description><link>http://mains.120v.ac/2015/01/23/interactive-fiction/</link><guid isPermaLink="false">dec841ef-ad5f-4339-aadb-6ee5327ab8c0</guid><category><![CDATA[Fiction]]></category><category><![CDATA[Game]]></category><category><![CDATA[Parsing]]></category><category><![CDATA[NLP]]></category><dc:creator><![CDATA[Bede Kelly]]></dc:creator><pubDate>Fri, 23 Jan 2015 02:31:00 GMT</pubDate></item></channel></rss>
