@@ -23,7 +23,7 @@
     <meta property="og:description" content="Research Methods To better understand the current problems facing those downloading multiple repositories from a user&#x27;s Github account, I will observe a frequent user of Git and Github clone multiple repositories from a remote user. Our remote user, simon-weber has..." />
     <meta property="og:url" content="http://mains.120v.ac/2015/01/23/analysis-section/" />
     <meta property="article:published_time" content="2015-01-23T03:15:32.695Z" />
-    <meta property="article:modified_time" content="2015-01-23T03:41:51.381Z" />
+    <meta property="article:modified_time" content="2015-01-23T04:11:57.459Z" />
     
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="analysis section" />
@@ -45,7 +45,7 @@
     "headline": "analysis section",
     "url": "http://mains.120v.ac/2015/01/23/analysis-section/",
     "datePublished": "2015-01-23T03:15:32.695Z",
-    "dateModified": "2015-01-23T03:41:51.381Z",
+    "dateModified": "2015-01-23T04:11:57.459Z",
     "description": "Research Methods To better understand the current problems facing those downloading multiple repositories from a user&#x27;s Github account, I will observe a frequent user of Git and Github clone multiple repositories from a remote user. Our remote user, simon-weber has..."
 }
     </script>
@@ -119,12 +119,34 @@ Me: Yeah, that could be integrated for sure - the original errors should get log
 
 Dan: Can we do that? I mean, I don't just want to go through every repository clicking "Yes, yes, yes"-
 
-Me: Sure, I'll add an option just to download everything. Anything else you'd like to see?
+Me: Sure, I'll add an option just to download everything. Anything else you'd like to see? You'll be running this on Unix-like systems, right?
 
-Dan: Nah, sounds good to me. I'll be using this a lot though, so there'd better not be any bugs!
+Dan: Yeah, Mac OSX and maybe Mint, so it should probably work on both of those. I'll be using this a lot though, so there'd better not be any bugs!
 
-Me: I'll do my best.  
+Me: I'll do my best - thanks a lot for your time.  
 </code></pre>
+
+<p>The interview confirmed what I thought: the major barrier between developers and their goal of cloning multiple Github repositories is usability.</p>
+
+<h3 id="backgroundtotheproblem">Background to the Problem</h3>
+
+<p>Many developers find the need in their daily lives to clone multiple repositories belonging to a single user. This is often as a result of projects being split into different repositories for easier version-control and separation of concerns (e.g. the front-end and back-end systems of a project).</p>
+
+<p>However, the current available methods are both unwieldy and unfriendly to users, requiring either lots of time-consuming copy-pasting into a terminal with the same repeated command, or an in-depth knowledge of technology such as Bash variable expansion.</p>
+
+<p>My system will be much faster and, more accessible and above all more user-friendly. Instead of accumulating a two-hundred-character command in Bash with full Git URLs, my project will provide both a menu-based and a vastly simplified command-line-based interface to download some or all of a user's Github repositories. </p>
+
+<h3 id="currentsystem">Current System</h3>
+
+<p>The current system for downloading multiple repositories from a user's Github account is, largely, non-existent. The most common system is, essentially, just to 'git clone $URL' for each repository that the user wants to download. For small numbers of repositories, perhaps 2 or 3, this may be sufficient; however, this is an extremely time-consuming way of achieving what is essentially a very simple task. The test user, Alexa, commented that it took 'ages' to find and download just 4, and when asked about the output she informed me that she did not understand most of what it meant.</p>
+
+<p>Below is a screenshot of a rather cryptic error caused by differences between the remote repository and the local version, when a simple <code>git pull</code> is run inside a repository.</p>
+
+<p><img src="../../../../content/images/2015/01/Screenshot-from-2015-01-23-04-01-22.png" alt="Screenshot" /></p>
+
+<h3 id="identificationofprospectiveusers">Identification of Prospective Users</h3>
+
+<p>Users of this program will, like Daniel, be somewhat experienced with the basics of Git and Github. However, they may not have read enough of Git's documentation to fully understand the error messages they may recieve (see above for an example). This, potentially, means that there is a very large client base for this system, who want to interact with their repositories and the repositories of others in a more friendly and interactive way. More advanced users could use the command-line interface to achieve all that they want in a single <em>readable</em> line of code, whereas newer users could use the menu interface to iterate through each repository and view their descriptions before deciding whether to clone them or not. This interface will use the arrow keys and return key to select choices, making it essentially universal to users of any major operating system. The skills to use this system at its most basic level will be absolutely negligible, and far below the expected skill level of anyone who requires the use of a Github repository.</p>
         </section>
 
         <footer class="post-footer">
