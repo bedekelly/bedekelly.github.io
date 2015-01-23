@@ -1,0 +1,3 @@
+User-agent: *
+Sitemap: http://mains.120v.ac/sitemap.xml
+Disallow: /ghost/
