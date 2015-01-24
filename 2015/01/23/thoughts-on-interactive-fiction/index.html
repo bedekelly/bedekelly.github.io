@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>Thoughts on Interactive Fiction</title>
+    <meta name="description" content="" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="../../../../favicon.ico">
+
+    <link rel="stylesheet" type="text/css" href="../../../../assets/css/screen.css?v=de9d9bd8ac" />
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
+
+    <link rel="canonical" href="http://mains.120v.ac/2015/01/23/thoughts-on-interactive-fiction/" />
+    
+    <meta property="og:site_name" content="bede kelly" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Thoughts on Interactive Fiction" />
+    <meta property="og:description" content="It&#x27;s no great secret that interactive fiction worlds like that of Zork tend to be pretty limited in scope, both in terms of narrative and in terms of the user&#x27;s breadth of options. It&#x27;s unclear at this point whether this..." />
+    <meta property="og:url" content="http://mains.120v.ac/2015/01/23/thoughts-on-interactive-fiction/" />
+    <meta property="article:published_time" content="2015-01-23T23:48:56.233Z" />
+    <meta property="article:modified_time" content="2015-01-23T23:48:56.231Z" />
+    
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Thoughts on Interactive Fiction" />
+    <meta name="twitter:description" content="It&#x27;s no great secret that interactive fiction worlds like that of Zork tend to be pretty limited in scope, both in terms of narrative and in terms of the user&#x27;s breadth of options. It&#x27;s unclear at this point whether this..." />
+    <meta name="twitter:url" content="http://mains.120v.ac/2015/01/23/thoughts-on-interactive-fiction/" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "publisher": "bede kelly",
+    "author": {
+        "@type": "Person",
+        "name": "Bede Kelly",
+        "image": "//www.gravatar.com/avatar/4ec02095df75dd2c308b9983f79e06ef?s=250&d=mm&r=x",
+        "url": "http://mains.120v.ac/author/bede",
+        "sameAs": null
+    },
+    "headline": "Thoughts on Interactive Fiction",
+    "url": "http://mains.120v.ac/2015/01/23/thoughts-on-interactive-fiction/",
+    "datePublished": "2015-01-23T23:48:56.233Z",
+    "dateModified": "2015-01-23T23:48:56.231Z",
+    "description": "It&#x27;s no great secret that interactive fiction worlds like that of Zork tend to be pretty limited in scope, both in terms of narrative and in terms of the user&#x27;s breadth of options. It&#x27;s unclear at this point whether this..."
+}
+    </script>
+
+    <meta name="generator" content="Ghost 0.5" />
+    <link rel="alternate" type="application/rss+xml" title="bede kelly" href="http://mains.120v.ac/rss/" />
+</head>
+<body class="post-template">
+
+    
+
+
+<header class="main-header post-head no-cover">
+    <nav class="main-nav  clearfix">
+        <a class="back-button icon-arrow-left" href="http://mains.120v.ac">Home</a>
+        <a class="subscribe-button icon-feed" href="http://mains.120v.ac/rss/">Subscribe</a>
+    </nav>
+</header>
+
+<main class="content" role="main">
+
+    <article class="post">
+
+        <header class="post-header">
+            <h1 class="post-title">Thoughts on Interactive Fiction</h1>
+            <section class="post-meta">
+                <time class="post-date" datetime="2015-01-23">23 January 2015</time> 
+            </section>
+        </header>
+
+        <section class="post-content">
+            <p>It's no great secret that interactive fiction worlds like that of Zork tend to be pretty limited in scope, both in terms of narrative and in terms of the user's breadth of options. It's unclear at this point whether this is because of the difficulties of language comprehension, the difficulties of adding new features after the fact, or some other reason, but I'm determined to make the interactions that a player has with the world as varied as possible. </p>
+
+<p>The most difficult task I can forsee is implementing NPCs - should they be represented as simple state machines, or more complex objects with levels of contentment, fear etc.? How should an interaction lasting multiple 'turns' be processed, like for example a conversation? It seems like the easiest option would be to implement some kind of "conversation" state, where if the player tries to perform an action outside of responding with a known set of possible responses, the server will inform the player that they are <code>Still in a conversation with $NPC_name!</code>. It'd make it a lot easier, but wouldn't allow for anything like <code>Show the barman my sword</code> without special-casing for each encounter.</p>
+
+<p>At a more abstract level, the philosophy for this game will be to provide as open and accessible a world as possible - this is something of a contrast to Zork, where the object of the game seems to be on the whole centred around revealing the core narrative. There won't be a fixed 'Main Quest'; however, players may choose to undertake some of a huge number of available quests. There will probably be some kind of 'Quest Log', which will implement the functionality to let players run between quests whenever they like. It'll also store the 'timer' information, to allow for quests with expiry dates, and allow callbacks to be run when either the quest is fulfilled or the time limit expires.</p>
+
+<p>As one of the most vital features for this game's success is its extendability, it will be thoroughly put through its paces with any number of items which special-case absolutely everything. Rings of increased inventory space, boots of quicker walking and rods of teleportation will abound, as well as - one hopes - more inventive names.</p>
+
+<p>There won't be any kind of hotbar, or inventory/character separation - the game will assume that everything you're carrying is accessible to you in a negligible amount of time. There may be some form of bank or deposit box, in which you can deposit your gold and treasures to keep them safe.</p>
+        </section>
+
+        <footer class="post-footer">
+
+
+            <figure class="author-image">
+                <a class="img" href="../../../../author/bede/index.html" style="background-image: url(http://www.gravatar.com/avatar/4ec02095df75dd2c308b9983f79e06ef?s=250&amp;d=mm&amp;r=x)"><span class="hidden">Bede Kelly's Picture</span></a>
+            </figure>
+
+            <section class="author">
+                <h4><a href="../../../../author/bede/index.html">Bede Kelly</a></h4>
+
+                    <p>Read <a href="../../../../author/bede/index.html">more posts</a> by this author.</p>
+                <div class="author-meta">
+                    
+                    
+                </div>
+            </section>
+
+
+            <section class="share">
+                <h4>Share this post</h4>
+                <a class="icon-twitter" href="https://twitter.com/share?text=Thoughts%20on%20Interactive%20Fiction&amp;url=http://mains.120v.ac/2015/01/23/thoughts-on-interactive-fiction/"
+                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <span class="hidden">Twitter</span>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://mains.120v.ac/2015/01/23/thoughts-on-interactive-fiction/"
+                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <span class="hidden">Facebook</span>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=http://mains.120v.ac/2015/01/23/thoughts-on-interactive-fiction/"
+                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <span class="hidden">Google+</span>
+                </a>
+            </section>
+
+        </footer>
+
+    </article>
+
+</main>
+
+
+
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="http://mains.120v.ac">bede kelly</a> &copy; 2015</section>
+        <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a></section>
+    </footer>
+
+    <script src="../../../../public/jquery.min.js?v=de9d9bd8ac"></script>
+
+    <script type="text/javascript" src="../../../../assets/js/jquery.fitvids.js?v=de9d9bd8ac"></script>
+    <script type="text/javascript" src="../../../../assets/js/index.js?v=de9d9bd8ac"></script>
+
+</body>
+</html>
