@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Bede Kelly - bede kelly]]></title><description><![CDATA[probably something about programming.]]></description><link>http://mains.120v.ac/</link><generator>Ghost 0.5</generator><lastBuildDate>Sat, 24 Jan 2015 00:52:47 GMT</lastBuildDate><atom:link href="http://mains.120v.ac/author/bede/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Thoughts on Interactive Fiction]]></title><description><![CDATA[<p>It's no great secret that interactive fiction worlds like that of Zork tend to be pretty limited in scope, both in terms of narrative and in terms of the user's breadth of options. It's unclear at this point whether this is because of the difficulties of language comprehension, the difficulties of adding new features after the fact, or some other reason, but I'm determined to make the interactions that a player has with the world as varied as possible. </p>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Bede Kelly - bede kelly]]></title><description><![CDATA[probably something about programming.]]></description><link>http://mains.120v.ac/</link><generator>Ghost 0.5</generator><lastBuildDate>Sun, 25 Jan 2015 16:32:18 GMT</lastBuildDate><atom:link href="http://mains.120v.ac/author/bede/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Thoughts on Interactive Fiction]]></title><description><![CDATA[<p>It's no great secret that interactive fiction worlds like that of Zork tend to be pretty limited in scope, both in terms of narrative and in terms of the user's breadth of options. It's unclear at this point whether this is because of the difficulties of language comprehension, the difficulties of adding new features after the fact, or some other reason, but I'm determined to make the interactions that a player has with the world as varied as possible. </p>
 
 <p>The most difficult task I can forsee is implementing NPCs - should they be represented as simple state machines, or more complex objects with levels of contentment, fear etc.? How should an interaction lasting multiple 'turns' be processed, like for example a conversation? It seems like the easiest option would be to implement some kind of "conversation" state, where if the player tries to perform an action outside of responding with a known set of possible responses, the server will inform the player that they are <code>Still in a conversation with $NPC_name!</code>. It'd make it a lot easier, but wouldn't allow for anything like <code>Show the barman my sword</code> without special-casing for each encounter.</p>
 
@@ -13,6 +13,8 @@
 
 <p>To better understand the current problems facing those downloading multiple repositories from a user's Github account, I will observe a frequent user of Git and Github clone multiple repositories from a remote user. Our remote user, <a href="https://github.com/simon-weber?tab=repositories">simon-weber</a> has at the time of writing exactly 40 repositories. Our test user has been instructed to download the 'muspy', 'gomegle', 'crunchbang-conf' and 'omegle-to-irc' repositories.</p>
 
+<p><img src="http://mains.120v.ac/content/images/2015/01/Screenshot-from-2015-01-25-15-33-02.png" alt="Simon Weber's Github Page"></p>
+
 <p>Below is a screenshot showing the test user's attempts to clone these repositories. Note the spelling mistake made in cloning 'crunchbang-conf', leading to an error that the test user must use a keyboard interrupt to escape from, and the amount of characters necessary to type out these commands.</p>
 
 <p><img src="http://mains.120v.ac/content/images/2015/01/git_woes.png" alt="Screenshot showing a long, failed trail of Git commands, ending in Control-C to exit the program"></p>
@@ -20,10 +22,12 @@
 <p>This observation highlighted some key flaws in the way that multiple Github repositories must be cloned:</p>
 
 <ul>
-<li><p>Every repository requires its own command to clone. Our test user circumvented this by using the Bash syntax to instruct the shell to run multiple commands sequentially, but this means extremely long lines of code. *</p></li>
+<li><p>Every repository requires its own command to clone. Our test user circumvented this by using the Bash syntax to instruct the shell to run multiple commands sequentially, but this means extremely long lines of code.</p></li>
 <li><p>Every repository's URL must be found and copied into the terminal, whether by hand or by using system functions (e.g. middle-click on Unix systems). While the copying may not be overly time-consuming for a small number of repositories, for a larger number it will get increasingly frustrating for the user (in fact, the user did report a sense of annoyance at having to perform such a menial action just 4 times).</p></li>
 <li><p>The output is completely opaque to any non-expert user. The version control system Git is renowned for being difficult to use: see <a href="http://merrigrove.blogspot.co.uk/2014/02/why-heck-is-git-so-hard-places-model-ok.html">here</a> and <a href="http://stevebennett.me/2012/02/24/10-things-i-hate-about-git/">here</a> (warning: strong language) for examples of user frustration and confusion.</p></li>
 </ul>
+
+<hr>
 
 <p>My project, then, should aim to provide a clear, simple method of cloning single or multiple repositories from a single Github user's account.</p>
 
@@ -78,7 +82,61 @@ Me: I'll do my best - thanks a lot for your time.
 
 <h3 id="identificationofprospectiveusers">Identification of Prospective Users</h3>
 
-<p>Users of this program will, like Daniel, be somewhat experienced with the basics of Git and Github. However, they may not have read enough of Git's documentation to fully understand the error messages they may recieve (see above for an example). This, potentially, means that there is a very large client base for this system, who want to interact with their repositories and the repositories of others in a more friendly and interactive way. More advanced users could use the command-line interface to achieve all that they want in a single <em>readable</em> line of code, whereas newer users could use the menu interface to iterate through each repository and view their descriptions before deciding whether to clone them or not. This interface will use the arrow keys and return key to select choices, making it essentially universal to users of any major operating system. The skills to use this system at its most basic level will be absolutely negligible, and far below the expected skill level of anyone who requires the use of a Github repository.</p>]]></description><link>http://mains.120v.ac/2015/01/23/analysis-section/</link><guid isPermaLink="false">80c74f21-0126-466b-be8e-0ebc92499c9d</guid><dc:creator><![CDATA[Bede Kelly]]></dc:creator><pubDate>Fri, 23 Jan 2015 03:15:32 GMT</pubDate></item><item><title><![CDATA[Thoughts on Interactive Fiction Programming]]></title><description><![CDATA[<p>After reading Ready Player One, I'm hyped for open-world gaming. Stories, interactions, quests, worlds, planets, all of that good stuff. I think I'll make one for myself.</p>
+<p>Users of this program will, like Daniel, be somewhat experienced with the basics of Git and Github. However, they may not have read enough of Git's documentation to fully understand the error messages they may recieve (see above for an example). This, potentially, means that there is a very large client base for this system, who want to interact with their repositories and the repositories of others in a more friendly and interactive way.</p>
+
+<p>More advanced users could use the command-line interface to achieve all that they want in a single <em>readable</em> line of code, whereas newer users could use the menu interface to iterate through each repository and view their descriptions before deciding whether to clone them or not. This interface will use the arrow keys and return key to select choices, making it essentially universal to users of any major operating system. The skills to use this system at its most basic level will be absolutely negligible, and far below the expected skill level of anyone who requires the use of a Github repository.</p>
+
+<p>The userbase will be largely comprised of developers, so I anticipate more heavy usage of the command-line interface than the Curses interface, as this will easily integrate into any of their own custom shell-scripts for maintaining repositories. In either case, the userbase will certainly be comfortable with one or both of the provided interfaces.</p>
+
+<h3 id="identificationofuserneedsandacceptablelimitations">Identification of User Needs and Acceptable Limitations</h3>
+
+<p>My research has found that the most common barriers to using Git and Github effectively lie in the realm of usability and comprehension: the system, in short, needs to be easier to use for newer developers, and faster to use for those more experienced with version control using these technologies. </p>
+
+<p>As a result of this, my client would like me to build a system that:</p>
+
+<ul>
+<li>Provides an easy-to-use and convenient mechanism to download and/or update multiple Github repositories at once</li>
+<li>Provides a faster alternative to manually downloading each repository through finding its URL through the web interface</li>
+<li>Allows automation with commands to "download all", "update all current and don't download any new repositories" etc.</li>
+<li>Provides user-comprehensible error messages to inform the user more succinctly and clearly what the problem is</li>
+</ul>
+
+<p>The system will not, as a result of inspection of the Github API for returning JSON information about a user's repositories, detect (and hence be able to download/update) more than the first 100 repositories. From my research, however, the average number of repositories per user lies far below that, typically in the region between 5 and 15.</p>
+
+<p>The system will not be able to <em>push</em> repositories as well as <em>pulling</em> them. This is not as a result of difficulty (since the command is a simple <code>git push</code> on any system with the <code>git</code> program installed), but it is simply out of the project's scope. To push repositories would require authentication with the remote repository, whereas a 'pull' is permitted for any public repository - it will work in precisely the same way for any public repository as it will for the user's own repositories.</p>
+
+<p>The system will not implement any failsafes for sudden loss of power or system shutdowns. This would introduce another arbitrary layer of complexity which would only be relied upon in these (extremely rare) situations, and quite possibly a performance penalty. As well as this, even if a repository's cloning were halted halfway through, re-running the program would fix the issue without errors (as does a simple 'git pull'). This feature has also not been requested, and after consulting with the client does not seem to be an issue of any priority.</p>
+
+<h3 id="datasourcesanddestinations">Data Sources and Destinations</h3>
+
+<table>  
+    <--! table="" heading="" --="">
+    <tr>
+        <th>Description</th>
+        <th>Source</th>
+        <th>Destination</th>
+    </tr>
+
+    <--! table="" items="" --="">
+    <tr>
+        <td>Remote User's JSON information (as UTF-8 string)</td>
+        <td>Github API <a href="http://mains.120v.ac/api.github.com">here</a></td>
+        <td>Local Python object as per Python 'json.loads' docs: json_data</td>
+    </tr>
+
+    <tr>
+        <td>Remote user's requested repositories (presumably as octet stream, but the implementation is hidden)</td>
+        <td>Github Servers, through 'git clone'</td>
+        <td>User's local filesystem (in the current working directory)</td>
+    </tr>
+
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+
+</--!></--!></table>]]></description><link>http://mains.120v.ac/2015/01/23/analysis-section/</link><guid isPermaLink="false">80c74f21-0126-466b-be8e-0ebc92499c9d</guid><dc:creator><![CDATA[Bede Kelly]]></dc:creator><pubDate>Fri, 23 Jan 2015 03:15:32 GMT</pubDate></item><item><title><![CDATA[Thoughts on Interactive Fiction Programming]]></title><description><![CDATA[<p>After reading Ready Player One, I'm hyped for open-world gaming. Stories, interactions, quests, worlds, planets, all of that good stuff. I think I'll make one for myself.</p>
 
 <p>I don't care much about the interface; to me, the permissive nature of the game's world is the important thing. I want it to be as easy as possible to expand: patch in new items, vehicles, quests, you name it.</p>
 
