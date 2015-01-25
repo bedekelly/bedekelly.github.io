@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Bede Kelly - bede kelly]]></title><description><![CDATA[probably something about programming.]]></description><link>http://mains.120v.ac/</link><generator>Ghost 0.5</generator><lastBuildDate>Sun, 25 Jan 2015 16:47:08 GMT</lastBuildDate><atom:link href="http://mains.120v.ac/author/bede/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Thoughts on Interactive Fiction]]></title><description><![CDATA[<p>It's no great secret that interactive fiction worlds like that of Zork tend to be pretty limited in scope, both in terms of narrative and in terms of the user's breadth of options. It's unclear at this point whether this is because of the difficulties of language comprehension, the difficulties of adding new features after the fact, or some other reason, but I'm determined to make the interactions that a player has with the world as varied as possible. </p>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Bede Kelly - bede kelly]]></title><description><![CDATA[probably something about programming.]]></description><link>http://mains.120v.ac/</link><generator>Ghost 0.5</generator><lastBuildDate>Sun, 25 Jan 2015 16:48:56 GMT</lastBuildDate><atom:link href="http://mains.120v.ac/author/bede/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Thoughts on Interactive Fiction]]></title><description><![CDATA[<p>It's no great secret that interactive fiction worlds like that of Zork tend to be pretty limited in scope, both in terms of narrative and in terms of the user's breadth of options. It's unclear at this point whether this is because of the difficulties of language comprehension, the difficulties of adding new features after the fact, or some other reason, but I'm determined to make the interactions that a player has with the world as varied as possible. </p>
 
 <p>The most difficult task I can forsee is implementing NPCs - should they be represented as simple state machines, or more complex objects with levels of contentment, fear etc.? How should an interaction lasting multiple 'turns' be processed, like for example a conversation? It seems like the easiest option would be to implement some kind of "conversation" state, where if the player tries to perform an action outside of responding with a known set of possible responses, the server will inform the player that they are <code>Still in a conversation with $NPC_name!</code>. It'd make it a lot easier, but wouldn't allow for anything like <code>Show the barman my sword</code> without special-casing for each encounter.</p>
 
@@ -118,7 +118,7 @@ Me: I'll do my best - thanks a lot for your time.
 
     <tr>
         <td>Remote User's JSON information (as UTF-8 string)</td>
-        <td>Github API <a href="http://mains.120v.ac/api.github.com">here</a></td>
+        <td>Github JSON API, at api.github.com</td>
         <td>Local Python object as per Python 'json.loads' docs: json_data</td>
     </tr>
 
@@ -137,7 +137,7 @@ Me: I'll do my best - thanks a lot for your time.
     <tr>
         <td>Remote User's API URL</td>
         <td>Remote user's username, passed into the api_url string-formatting function</td>
-        <td>Local URL string, passed into 'get_json' and used for urllib.request.urlopen </td>
+        <td>Local URL string, passed into 'get_json' and there used for urllib.request.urlopen </td>
     </tr>
 
 </table>]]></description><link>http://mains.120v.ac/2015/01/23/analysis-section/</link><guid isPermaLink="false">80c74f21-0126-466b-be8e-0ebc92499c9d</guid><dc:creator><![CDATA[Bede Kelly]]></dc:creator><pubDate>Fri, 23 Jan 2015 03:15:32 GMT</pubDate></item><item><title><![CDATA[Thoughts on Interactive Fiction Programming]]></title><description><![CDATA[<p>After reading Ready Player One, I'm hyped for open-world gaming. Stories, interactions, quests, worlds, planets, all of that good stuff. I think I'll make one for myself.</p>
