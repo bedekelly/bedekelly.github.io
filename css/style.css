@@ -51,7 +51,8 @@ nav {
   display: block;
   width: 100%;
   text-align: right;
-  padding: calc(10px + 1vw);
+  padding-top: calc(10px + 0.7vh);
+  padding-right: calc(5vw + 0.5em + 0.25vw);
   font-size: calc(8pt + 1vw);
 }
 
