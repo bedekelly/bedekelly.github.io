@@ -124,7 +124,7 @@ section > p {
 }
 
 ::selection {
-  background: var(--accent1);
+  background: var(--accent2);
 }
 
 :not(:p)::selection {
