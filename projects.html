@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Bede Kelly | Projects</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  
+      <link rel="stylesheet" href="css/projects.css">
+
+  
+</head>
+
+<body>
+
+  <div class="top metro">
+  <div class="top-white-background"></div>
+  <div class="line"></div>
+  <div class="left station"></div>  
+  <div class="right station"></div>
+  <div class="car" id="top-metro-car"></div>
+</div>
+
+<nav>
+  <a class="home-link" href="https://bede.io">Home</a>
+  <a class="blog-link" href="https://blog.bede.io">Blog</a>
+</nav>
+
+<heading>
+  <h1>Projects</h1>
+</heading>
+
+<section class="projects-intro">
+  <p>Here, I've collected some of the projects I've worked on over my time as a programmer. Not all pieces are production-quality, but all should hopefully demonstrate some useful or interesting thing I've learnt!</p>
+</section>
+
+<section class="python collapsed">
+  <h2 class="section-title" onclick="toggleVisible(this);">Python</h2>
+  
+  <article class="project">
+    <h3 class="project-title">Budget Tracker</h3>
+    <div class="grid">
+      <div class="left project-description">
+        To keep better track of my finances, I built a serverless budget tracker using Python on AWS Lambda functions, called when I spend money or request information about my spending. Data is stored in a DynamoDB table and optionally written to a Google Sheets document. 
+      </div>
+      <div class="right">
+        <a href="https://blog.bede.io/serverless-spending-tracker/"><img src="https://s3.eu-west-2.amazonaws.com/static-electricity/images/python/budget.png" alt="" class="project-image"></a>
+      </div>
+    </div>
+  </article>
+  
+  <article class="project">
+    <h3 class="project-title">Web Crawler</h3>
+    <div class="grid">
+      <div class="left project-description">
+      As part of my interview process for a fintech company in London, I wrote an idiomatic web crawler in Python. It produces a dictionary of asset links, allows for a maximum recursion depth and detects cycles.
+      </div>
+    <div class="right">
+      <a href="https://github.com/bedekelly/crawler"><img src="https://s3.eu-west-2.amazonaws.com/static-electricity/images/python/crawler.png" alt="" class="project-image"></a>
+    </div>
+    </div>
+  </article>
+  
+  <article class="project">
+    <h3 class="project-title">Minitools</h3>
+    <div class="grid">
+      <div class="left project-description">
+        In the spirit of py.test, I wrote a set of testing tools complete with mocking, patching and batching test cases. Although complex monkey-patching and introspection lie underneath, the developer experience is surprisingly simple. 
+      </div>
+      <div class="right">
+        <a href="https://github.com/bedekelly/minitools"><img src="https://s3.eu-west-2.amazonaws.com/static-electricity/images/python/minitools.png" alt="" class="project-image"></a>
+      </div>
+    </div>
+  </article>
+  
+  <article class="project">
+    <h3 class="project-title">Magic Enum</h3>
+    <div class="grid">
+      <div class="left project-description">
+        After learning about C++'s excellent Enum type, I decided to improve on Python's own lacklustre enum syntax. This project is for toy purposes only, but includes some deep metaprogramming and specialised language features. 
+      </div>
+      <div class="right">
+        <a href="https://github.com/bedekelly/magic-enum"><img src="https://s3.eu-west-2.amazonaws.com/static-electricity/images/python/enum.png" alt="" class="project-image"></a>
+      </div>
+    </div>
+  </article>
+  
+  <article class="project">
+    <h3 class="project-title">Tinybuf</h3>
+    <div class="grid">
+      <div class="left project-description">
+        Tinybuf is an ongoing project inspired by Google's ProtoBuf and Cap'n Proto. When complete, it will be a highly efficient serialisation protocol for structured data into binary format.
+      </div>
+      <div class="right">
+        <img src="https://s3.eu-west-2.amazonaws.com/static-electricity/images/python/tinybuf.png" alt="" class="project-image">
+      </div>
+    </div>
+  </article>
+  
+  <article class="project">
+    <h3 class="project-title">Blog Posts</h3>
+    <div class="grid">
+      <div class="left project-description">
+        A lot of projects I undertake in Python don't make it onto GitHub as production-ready code, but they might well merit a blog post! Over the years I've written about composable partial functions, serverless architecture, natural language processing for text games, language features like string formatting and design patterns.
+      </div>
+      <div class="right">
+        <a href="https://blog.bede.io"><img src="https://s3.eu-west-2.amazonaws.com/static-electricity/images/python/blog.png" alt="" class="project-image"></a>
+      </div>
+    </div>
+  </article>
+  
+</section>
+
+<section class="design collapsed">
+  <h2 class="section-title" onclick="toggleVisible(this);">Design</h2>
+  
+    <article class="project">
+    <h3 class="project-title">MacOS Security Modal</h3>
+    <div class="grid">
+      <div class="left project-description">
+        One day, a particular Slack notification kept appearing. I started typing in my password without even thinking about it. This made me wonder – what would happen if the notification wasn't really from Slack at all?
+      </div>
+      <div class="right">
+        <a href="https://codepen.io/bedekelly/pen/BJEmPQ"><img src="https://s3.eu-west-2.amazonaws.com/static-electricity/images/design/macos.png" alt="" class="project-image"></a>
+      </div>
+    </div>
+  </article>
+  
+  <article class="project">
+    <h3 class="project-title">Website: Bede.io</h3>
+    <div class="grid">
+      <div class="left project-description">
+        This website, which should be nice and responsive, uses CSS grid and flexbox as well as a bunch of responsive typography to (hopefully!) look good on all screen sizes, from tiny mobile devices to ultrawide desktops.
+      </div>
+      <div class="right">
+        <a href="https://bede.io"><img src="https://s3.eu-west-2.amazonaws.com/static-electricity/images/design/website.png" alt="" class="project-image"></a>
+      </div>
+    </div>
+  </article>
+  
+  <article class="project">
+    <h3 class="project-title">CI System</h3>
+    <div class="grid">
+      <div class="left project-description">
+        Working with Jenkins made me crave a simpler, prettier interface for continuous integration systems. This design was my attempt at a design for a well-integrated, easy-to-understand CI system!
+      </div>
+      <div class="right">
+        <a href="https://codepen.io/bedekelly/pen/mBKGaK"><img src="https://s3.eu-west-2.amazonaws.com/static-electricity/images/design/ci.png" alt="" class="project-image"></a>
+      </div>
+    </div>
+  </article>
+</section>
+
+<section class="pure-css collapsed">
+  <h2 class="section-title" onclick="toggleVisible(this);">Pure CSS</h2>
+  
+  <article class="project">
+    <h3 class="project-title">World Flags</h3>
+    <div class="grid">
+      <div class="left project-description">
+        A simple one: flags of the world, each created using only one (empty!) div. It's a fun puzzle, especially with more complicated flags!
+      </div>
+      <div class="right">
+        <a href="https://codepen.io/bedekelly/pen/mMBjEw"><img src="https://s3.eu-west-2.amazonaws.com/static-electricity/images/css/flags.png" alt="" class="project-image"></a>
+      </div>
+    </div>
+  </article>
+  
+  <article class="project">
+    <h3 class="project-title">Container Ship</h3>
+    <div class="grid">
+      <div class="left project-description">
+        In the same vein as the flags, this was an attempt to draw a container ship using CSS with as little HTML as possible! 
+      </div>
+      <div class="right">
+        <a href="https://codepen.io/bedekelly/pen/yzozWJ"><img src="https://s3.eu-west-2.amazonaws.com/static-electricity/images/css/ship.png" alt="" class="project-image"></a>
+      </div>
+    </div>
+  </article>
+  
+  <article class="project">
+    <h3 class="project-title">Font Showcases</h3>
+    <div class="grid">
+      <div class="left project-description">
+        While learning about best practices in typography, I found it useful to copy or create examples from books. These took the form of "font showcases", which displayed a font as well as possible, with attention to line spacing, rendering techniques and font size for screens.
+      </div>
+      <div class="right">
+        <a href="https://codepen.io/collection/DNdxMm/"><img src="https://s3.eu-west-2.amazonaws.com/static-electricity/images/css/font.png" alt="" class="project-image"></a>
+      </div>
+    </div>
+  </article>
+  
+  <article class="project">
+    <h3 class="project-title">Neon Grid</h3>
+    <div class="grid">
+      <div class="left project-description">
+        Using CSS keyframe-based animation combined with 3d transformations gives a great retro-looking result!
+      </div>
+      <div class="right">
+        <a href="https://codepen.io/bedekelly/pen/gvGVPM"><img src="https://s3.eu-west-2.amazonaws.com/static-electricity/images/css/grid.png" alt="" class="project-image"></a>
+      </div>
+    </div>
+  </article>
+</section>
+
+<section class="javascript collapsed">
+  <h2 class="section-title" onclick="toggleVisible(this);">JavaScript</h2>
+  
+  <article class="project">
+    <h3 class="project-title">Lock & Key</h3>
+    <div class="grid">
+      <div class="left project-description">
+        Inspired by Batman unlocking the BatCave with a piano, I made an authentication system using a MIDI keyboard at a hackathon. Later, I extended the system so it really did authenticate with a backend and exchange secret keys. 
+      </div>
+      <div class="right">
+        <a href="https://github.com/bedekelly/key">
+          <img src="https://s3.eu-west-2.amazonaws.com/static-electricity/images/javascript/key.png" alt="" class="project-image">
+        </a>
+      </div>
+    </div>
+  </article>
+  
+  <article class="project">
+    <h3 class="project-title">MetroJS</h3>
+    <div class="grid">
+      <div class="left project-description">
+        A more full-featured version the Mini Metro style animations on this website, MetroJS animates a London Underground tube map (rendered onto an HTML5 canvas) to show trains moving between stations. 
+      </div>
+      <div class="right">
+        <a href="https://github.com/bedekelly/metrojs">
+          <img src="https://s3.eu-west-2.amazonaws.com/static-electricity/images/javascript/metro.png" alt="" class="project-image">
+        </a>
+      </div>
+    </div>
+  </article>
+  
+  <article class="project">
+    <h3 class="project-title">5:28</h3>
+    <div class="grid">
+      <div class="left project-description">
+        Although I've now left jQuery behind in favour of frontend frameworks like Vue and Elm, I was very happy with this choice-based browser game I built using jQuery called 5:28. 
+      </div>
+      <div class="right">
+        <a href="https://github.com/bedekelly/5-28">
+          <img src="https://s3.eu-west-2.amazonaws.com/static-electricity/images/javascript/5-28.png" alt="" class="project-image">
+        </a>
+      </div>
+    </div>
+  </article>
+
+</section>
+
+<section class="graphics collapsed">
+  <h2 class="section-title" onclick="toggleVisible(this);">3d Graphics</h2>
+  
+  <article class="project">
+    <h3 class="project-title">Metro 3D</h3>
+    <div class="grid">
+      <div class="left project-description">
+        For my first time using Three.JS for WebGL, I decided to play with the shadow map and use multiple directional light sources for a realistically lighted – if minimal – scene. 
+      </div>
+      <div class="right">
+        <a href="https://codepen.io/bedekelly/pen/PQMpPK">
+          <img src="https://s3.eu-west-2.amazonaws.com/static-electricity/images/graphics/metro3d.png" alt="" class="project-image">
+        </a>
+      </div>
+    </div>
+  </article>
+  
+  <article class="project">
+    <h3 class="project-title">Cube Wave</h3>
+    <div class="grid">
+      <div class="left project-description">
+        This Cube Wave is simpler than it looks – each bar's height is governed by the current time as well as its distance from the center. Given these two variables and some Processing/P5 rendering, we get this cool effect!
+      </div>
+      <div class="right">
+        <a href="https://codepen.io/bedekelly/pen/paBabw?editors=0110">
+          <img src="https://s3.eu-west-2.amazonaws.com/static-electricity/images/graphics/cubewave.png" alt="" class="project-image">
+        </a>
+      </div>
+    </div>
+  </article>
+  
+</section>
+
+<section class="elm collapsed">
+  <h2 class="section-title" onclick="toggleVisible(this);">Elm</h2>
+  
+  <article class="project">
+    <h3 class="project-title">Budget Dashboard</h3>
+    <div class="grid">
+      <div class="left project-description">
+        As part of my budget tracker, I built a web dashboard in Elm with a burndown chart and a table with my top 5 spending categories.
+      </div>
+      <div class="right">
+        <a href="https://github.com/bedekelly/elm-dashboard">
+          <img src="https://s3.eu-west-2.amazonaws.com/static-electricity/images/elm/dashboard.png" alt="" class="project-image">
+        </a>
+      </div>
+    </div>
+  </article>
+  
+  <article class="project">
+    <h3 class="project-title">Smart Table</h3>
+    <div class="grid">
+      <div class="left project-description">
+        Also part of the budget tracker, I built a searchable, sortable table using Elm. The realtime updates are highly performant even in tables of thousands of rows.
+      </div>
+      <div class="right">
+        <a href="https://github.com/bedekelly/elm-table">
+          <img src="https://s3.eu-west-2.amazonaws.com/static-electricity/images/elm/table.png" alt="" class="project-image">
+        </a>
+      </div>
+    </div>
+  </article>
+  
+  <article class="project">
+    <h3 class="project-title">Echo Chamber</h3>
+    <div class="grid">
+      <div class="left project-description">
+        Elm's inbuilt support for WebSockets make it a perfect candidate for building highly performant webapps which can update in realtime. This simple chat app demonstrates how easy it is to use websockets in Elm.
+      </div>
+      <div class="right">
+        <a href="https://github.com/bedekelly/elm-chat">
+          <img src="https://s3.eu-west-2.amazonaws.com/static-electricity/images/elm/chat.png" alt="" class="project-image">
+        </a>
+      </div>
+    </div>
+  </article>
+  
+</section>
+
+<section class="c collapsed">
+  <h2 class="section-title" onclick="toggleVisible(this);">C</h2>
+  
+  <article class="project">
+    <h3 class="project-title">Mandelbrot Zoom</h3>
+    <div class="grid">
+      <div class="left project-description">
+        In order to render deep Mandelbrot zoom videos of high resolution, I wrote a C program to generate alternating frames in parallel on all 8 cores of my machine, then used some maths and bash scripting to stitch them together into an HD video.
+      </div>
+      <div class="right">
+        <a href="https://vimeo.com/240290765">
+          <img src="https://s3.eu-west-2.amazonaws.com/static-electricity/images/c/brot.png" alt="" class="project-image">
+        </a>
+      </div>
+    </div>
+  </article>
+  
+  <article class="project">
+    <h3 class="project-title">Profiling Hashtables</h3>
+    <div class="grid">
+      <div class="left project-description">
+        While learning C for the first time, I wrote a simple implementation of a hashtable. I then used a Jupyter notebook to analyse its performance and detect its bottlenecks – which turn out to be rather obvious!
+      </div>
+      <div class="right">
+        <a href="https://blog.bede.io/profiling-hashtables-in-c/">
+          <img src="https://s3.eu-west-2.amazonaws.com/static-electricity/images/c/hashmap.png" alt="" class="project-image">
+        </a>
+      </div>
+    </div>
+  </article>
+  
+</section>
+
+
+
+
+<section class="findme">
+  <ul class="contact-methods">
+    <li>
+      <a href="https://codepen.io/bedekelly">CodePen</a>
+    </li>
+    <li>
+      <a href="https://github.com/bedekelly">GitHub</a>
+    </li>
+    <li>
+      <a href="https://bede.io/blog">Blog</a>
+    </li>
+    <li>
+      <a href="https://soundcloud.com/bedekelly">SoundCloud</a>
+    </li>
+    <li>
+      <a href="https://linkedin.com/in/bedekelly">LinkedIn</a>
+    </li>
+    <li>
+      <a href="mailto:contact@bede.io">Email</a>
+    </li>
+    <li>
+      <a href="https://m.me/0xbede">Facebook</a>
+    </li>
+    <li>
+      <a href="https://twitter.com/bedekelly">Twitter</a>
+    </li>
+    <li>
+      <a href="https://instagr.am/bedekelly">Instagram</a>
+    </li>
+  </ul>
+</section>
+
+<div class="bottom metro">
+  <div class="line"></div>
+  <div class="left station"></div>  
+  <div class="right station"></div>
+  <div class="car" id="bottom-metro-car"></div>
+</div>
+  
+  
+
+    <script  src="js/projects.js"></script>
+
+
+
+
+</body>
+
+</html>

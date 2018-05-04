@@ -4,12 +4,8 @@
 :root {
   --background: #FFFCF9;
   --text: #454545;
-/*
-  --accent1: #00Bede;
-  --accent2: #EA5D4B;
-*/
-  --accent1: rgb(0, 152, 216);
-  --accent2: rgb(220, 36, 31);
+  --accent2: #00Bede; /* that's me! */
+  --accent1: #EA5D4B;
 }
 
 html, body {
@@ -22,11 +18,8 @@ nav, h1, h2, h3 {
 
 html {
   box-sizing: border-box;
-  /* This sets a nice scrolling colour! */
   color: var(--text);
   background: var(--accent1);
-/*   border-top: 5px solid var(--accent2); */
-/*   border-bottom: 5px solid var(--accent2); */
   text-rendering: optimizeLegibility;
   height: 100%;
 }
@@ -37,17 +30,6 @@ body {
   background: var(--background);
   padding-bottom: 20px;
   padding-top: calc(10px + 2vh);
-/*   border-top: 5px solid var(--accent1); */
-/*   border-bottom: 5px solid var(--accent1); */
-}
-
-img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  object-fit: cover;
-  display: block;
-  margin: calc(25px + 10vmin) auto 0 auto;
 }
 
 nav {
@@ -56,7 +38,7 @@ nav {
   width: 100%;
   text-align: right;
   padding-top: calc(10px + 0.7vh);
-  padding-right: calc(5vw + 0.5em + 0.25vw);
+  padding-right: calc(5vw + 0.5em + 0.25vw);;
   font-size: calc(8pt + 1vw);
 }
 
@@ -78,7 +60,7 @@ nav > a {
   color: var(--accent1);
 }
 
-.projects-link:hover,
+.home-link:hover,
 .mail-link:hover,
  li:nth-child(2n + 1)>a:hover {
   color: var(--accent2);
@@ -91,13 +73,12 @@ heading {
 h1 {
   font-size: calc(20pt + 2.5vw);
   font-weight: 800;
-  margin: 15px;
+  margin: 10vh 15px 15px 15px;
   text-transform: uppercase;
 }
 
 h2 {
   font-size: calc(12pt + 2vw);
-  margin: 0 auto;
   text-transform: uppercase;
   font-weight: 800;
   max-width: 80vw;
@@ -106,8 +87,8 @@ h2 {
 
 section {
   width: 80vw;
-  max-width: 650px;
-  margin: calc(25px + 10vmin) auto 0 auto;
+  max-width: 800px;
+  margin: calc(10px + 5vmin) auto 0 auto;
 }
 
 h3 {
@@ -223,6 +204,7 @@ li > a {
   position: absolute;
   left: 1vw;
   top: 1.42vh;
+  transform: translateZ(0);
 }
 
 .top.metro > .car {
@@ -240,4 +222,132 @@ li > a {
   width: 100%;
   height: 25%;
   background: white;
+}
+
+.project-title {
+  font-size: calc(5pt + 3vw);
+  color: var(--accent1);
+  margin-left: 10vw;
+}
+
+.section-title {
+  color: var(--accent2);
+}
+
+.project-description {
+  font-family: "Lora";
+  line-height: 1.5;
+  margin-right: 30px;
+  padding-bottom: 0px;
+/*   text-align: center; */
+  max-width: 60vw;
+  margin: 3vh auto;
+
+}
+
+.project-image {
+  width: 60vw;
+  justify-self: center;
+  height: auto;
+}
+
+.right {
+  justify-self: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-areas: "picture" "description";
+  grid-template-columns: 1fr;
+}
+
+.right {
+  grid-area: picture;
+  align-self: center;
+}
+
+.left {
+  grid-area: description;
+  height: 
+}
+
+.project {
+  margin-bottom: 50px;
+}
+
+h1 {
+  margin-bottom: 10vh;
+}
+
+.section-title {
+  text-align: left;
+  margin-bottom: 0;
+  margin-top: 0;
+  margin-left: 0;
+  cursor: pointer;
+  user-select: none;
+}
+
+.collapsed,.expanded {
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+}
+
+.collapsed > .section-title {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.collapsed > .section-title:before {
+  content: "+  ";
+}
+
+.expanded > .section-title:before {
+  content: "\2013  ";  /* Equivalent to &ndash; */
+}
+
+
+@media (min-width: 700px) {
+  .grid {
+    grid-template-areas: "description picture";
+    grid-template-columns: 15fr 6fr;
+  }
+  
+  .project-image {
+    width: 100%;
+    height: auto;
+    align-self: center;
+  }
+  
+  .project-title {
+    font-size: calc(8pt + 1.2vw);
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+  
+  .project-description {
+    text-align: left;
+    display: flex;
+    align-self: center;
+    align-content: center;
+    max-width: inherit;
+    margin-right: 30px;
+  }
+  
+  .expanded > .section-title {
+    margin-bottom: 10vh; 
+  }
+  
+  .project {
+    margin-bottom: 5vh;
+  }
+}
+
+img {
+  border-radius: 1%;
+  box-shadow: 0 0 5px lightgrey;
+}
+
+.project {
+  display: none;
 }
