@@ -80,6 +80,7 @@ nav > a {
 
 .projects-link:hover,
 .mail-link:hover,
+.cv-link:hover,
  li:nth-child(2n + 1)>a:hover {
   color: var(--accent2);
 }
