@@ -66,6 +66,7 @@ nav > a {
 
 .home-link:hover,
 .mail-link:hover,
+.cv-link:hover,
  li:nth-child(2n + 1)>a:hover {
   color: var(--accent2);
 }
@@ -138,7 +139,7 @@ li {
 }
 
 li > a {
-  font-size: 10pt;
+  font-size: 12pt;
   font-family: "Arial", sans;
 }
 
