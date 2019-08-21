@@ -25,7 +25,7 @@ html {
   /* This sets a nice scrolling colour! */
   color: var(--text);
   background: var(--accent1);
-/*   border-top: 5px solid var(--accent2); */
+   /*border-top: 5px solid var(--accent2);*/
 /*   border-bottom: 5px solid var(--accent2); */
   text-rendering: optimizeLegibility;
   height: 100%;
@@ -37,8 +37,8 @@ body {
   background: var(--background);
   padding-bottom: 20px;
   padding-top: calc(10px + 2vh);
-/*   border-top: 5px solid var(--accent1); */
-/*   border-bottom: 5px solid var(--accent1); */
+   border-top: 1.5vh solid var(--accent1);
+   border-bottom: 1.5vh solid var(--accent1);
 }
 
 img {
