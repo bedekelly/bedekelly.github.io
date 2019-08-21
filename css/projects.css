@@ -27,7 +27,7 @@ h1.projects-main-title {
 html {
   box-sizing: border-box;
   color: var(--text);
-  background: var(--accent1);
+  background: var(--accent2);
   text-rendering: optimizeLegibility;
   height: 100%;
 }
@@ -38,8 +38,8 @@ body {
   background: var(--background);
   padding-bottom: 20px;
   padding-top: calc(10px + 2vh);
-  border-top: 1.5vh solid var(--accent1);
-  border-bottom: 1.5vh solid var(--accent1);
+  border-top: 1.5vh solid var(--accent2);
+  border-bottom: 1.5vh solid var(--accent2);
 }
 
 nav {
@@ -123,18 +123,19 @@ section > p {
   background: var(--accent2);
 }
 
-:not(p)::selection {
-  background: none;
-}
+/*:not(p)::selection {*/
+/*  background: none;*/
+/*}*/
 
-ul {
+.contact-methods {
   padding: 0;
   list-style-type: none;
   margin-top: 75px;
   text-align: center;
+  font-family: "Arial", sans-serif;
 }
 
-li {
+.contact-methods li {
   display: inline;
   margin: 7px;
 }
@@ -144,7 +145,7 @@ li {
   margin-bottom: 25px;
 }
 
-li > a {
+li.navigation > a {
   font-size: 12pt;
   font-family: "Arial", sans-serif;
 }
@@ -354,10 +355,22 @@ img {
   box-shadow: 0 0 5px lightgrey;
 }
 
-.project {
-  display: none;
-}
-
 .projects-intro {
   margin-bottom: 7vh;
+}
+
+
+.more-projects {
+  font-family: "Lora", serif;
+  font-size: calc(10pt + 0.5vw);
+  line-height: 1.6;
+  margin-top: 3em;
+}
+
+.more-projects ul {
+  margin-top: 0.5em;
+}
+
+.more-projects ul a {
+  font-weight: bold;
 }
