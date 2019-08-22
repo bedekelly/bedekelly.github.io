@@ -9,8 +9,12 @@
     />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="css/projects.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,400i,700,800,900">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,400i,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:800,900&subset=latin">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,400i,700&subset=latin">
+
+      <link rel="preload" href="/js/projectsData.js" as="script">
+      <link rel="preload" href="/js/vendor/htm.module.js" as="script">
+      <link rel="preload" href="/js/vendor/preact.module.js" as="script">
   </head>
 
     <nav>
@@ -69,6 +73,6 @@
       </ul>
     </section>
 
-    <script src="js/projects.js" type="module"></script>
+    <script async src="js/projects.js" type="module"></script>
   </body>
 </html>
