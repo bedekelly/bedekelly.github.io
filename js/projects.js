@@ -1,6 +1,6 @@
 import projectsData from './projectsData.js';
-import {h, render, Component} from './vendor/preact.mjs'
-import htm from './vendor/htm.mjs';
+import {h, render, Component} from './vendor/preact.module.js'
+import htm from './vendor/htm.module.js';
 const html = htm.bind(h);
 
 
