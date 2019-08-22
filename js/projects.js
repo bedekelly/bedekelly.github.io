@@ -1,6 +1,6 @@
 import projectsData from './projectsData.js';
-import {h, render, Component} from 'https://cdnjs.cloudflare.com/ajax/libs/preact/10.0.0-rc.1/preact.module.js';
-import htm from 'https://unpkg.com/htm?module';
+import {h, render, Component} from './vendor/preact.mjs'
+import htm from './vendor/htm.mjs';
 const html = htm.bind(h);
 
 
