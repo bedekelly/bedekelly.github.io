@@ -147,92 +147,6 @@ li.navigation > a {
   font-family: "Arial", sans-serif;
 }
 
-
-/**
- * Draggable tubes!
- * This is the bit that'll probably break everything!
- */
-.metro {
-  position: relative;
-  height: 5vh;
-  width: 90vw;
-  padding: 0;
-  margin: 0 auto;
-}
-
-.metro > .line {
-  position: absolute;
-  width: 100%;
-  top: calc(2.5vh - 0.75vh);
-  height: 1.3vh;
-}
-
-.top.metro > .line {
-  background: var(--accent1);
-}
-
-.bottom.metro > .line {
-  background: var(--accent2);
-}
-
-.metro > .left.station {
-  position: absolute;
-  width: calc(0.5em + 0.25vw);
-  height: 3vh;
-  left: 0;
-  top: 1vh;
-}
-
-.top.metro > .left.station {
-  background: var(--accent1);
-}
-
-.bottom.metro > .left.station {
-  background: var(--accent2);
-}
-
-.metro > .right.station {
-  position: absolute;
-  width: calc(0.5em + 0.25vw);
-  height: 3vh;
-  top: 1vh;
-  right: 0;
-}
-
-.top.metro > .right.station {
-  background: var(--accent1);
-}
-
-.bottom.metro > .right.station {
-  background: var(--accent2);
-}
-
-.metro > .car {
-  width: 30px;
-  height: 2vh;
-  position: absolute;
-  left: 1vw;
-  top: 1.42vh;
-  transform: translateZ(0);
-}
-
-.top.metro > .car {
-  background: var(--accent1);
-}
-
-.bottom.metro > .car {
-  background: var(--accent2);
-}
-
-.top-white-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 25%;
-  background: white;
-}
-
 .project-title {
   font-size: calc(5pt + 3vw);
   color: var(--accent1);
@@ -244,11 +158,9 @@ li.navigation > a {
 }
 
 .project-description {
-  font-family: "Lora";
+  font-family: "Lora", serif;
   line-height: 1.5;
-  margin-right: 30px;
-  padding-bottom: 0px;
-/*   text-align: center; */
+  padding-bottom: 0;
   max-width: 60vw;
   margin: 3vh auto;
 
