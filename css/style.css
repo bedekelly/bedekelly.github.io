@@ -69,17 +69,14 @@ nav > a {
   transition: ease all 0.2s;
 }
 
+.home-link:hover,
 .blog-link:hover,
 .twitter-link:hover,
- li:nth-child(2n)>a:hover {
-  color: var(--accent1);
-}
-
-.projects-link:hover,
 .mail-link:hover,
 .cv-link:hover,
- li:nth-child(2n + 1)>a:hover {
-  color: var(--accent2);
+a:hover {
+  color: var(--accent1);
+  transition: ease all 0.1s;
 }
 
 heading {

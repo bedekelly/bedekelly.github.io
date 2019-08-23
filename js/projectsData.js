@@ -13,7 +13,7 @@ export default { sections: [
           experimentation.
         `,
         url: 'https://github.com/bedekelly/minim',
-        image: 'https://static-electricity.s3.eu-west-2.amazonaws.com/images/frontend/Minim.png'
+        image: 'images/projects/Minim.png'
       },
       {
         title: 'Sparklines',
@@ -23,7 +23,7 @@ export default { sections: [
           (60Hz) animation in all modern browsers including mobile.
         `,
         url: 'https://github.com/bedekelly/simple-react-sparklines',
-        image: 'https://github.com/bedekelly/simple-react-sparklines/blob/master/AnimatedSparkline.gif?raw=true'
+        image: 'images/projects/AnimatedSparkline.gif'
       },
       {
         title: 'Gal',
@@ -33,7 +33,7 @@ export default { sections: [
           images are loading. Can be downloaded and run in a single line of code.
         `,
         url: 'https://github.com/bedekelly/gal',
-        image: 'https://static-electricity.s3.eu-west-2.amazonaws.com/images/frontend/Gal.png'
+        image: 'images/projects/Gal.png'
       },
     ]
   },
@@ -49,7 +49,7 @@ export default { sections: [
             runs at 60Hz on all modern browsers – unlike Github's version!
           `,
           url: 'https://parallax.bede.io',
-          image: 'https://static-electricity.s3.eu-west-2.amazonaws.com/images/frontend/Parallax.png'
+          image: 'images/projects/Parallax.png'
         },
         {
           title: 'MacOS Security Modal',
@@ -61,7 +61,7 @@ export default { sections: [
             attention to minute details like shading and font sizes. 
           `,
           url: 'https://codepen.io/bedekelly/pen/BJEmPQ',
-          image: 'https://s3.eu-west-2.amazonaws.com/static-electricity/images/design/macos.png'
+          image: 'images/projects/MacOS.png'
         },
         {
           title: 'MetroJS',
@@ -70,7 +70,7 @@ export default { sections: [
             route-planning and stopping at individual stations.
           `,
           url: 'https://metro.bede.io',
-          image: 'https://static-electricity.s3.eu-west-2.amazonaws.com/images/frontend/Metro.png'
+          image: 'images/projects/Metro.png'
         }
       ]
     },
@@ -82,7 +82,7 @@ export default { sections: [
           description: `
             As part of my budget tracker, I built a web dashboard in Elm with a
             burndown chart and a table with my top 5 spending categories.`,
-          image: 'https://s3.eu-west-2.amazonaws.com/static-electricity/images/elm/dashboard.png',
+          image: 'images/projects/BudgetDashboard.png',
           url: 'https://github.com/bedekelly/elm-dashboard'
         },
         {
@@ -92,7 +92,7 @@ export default { sections: [
             table using Elm. The realtime updates are highly performant even in
             tables of thousands of rows.
           `,
-          image: 'https://s3.eu-west-2.amazonaws.com/static-electricity/images/elm/table.png',
+          image: 'images/projects/SmartTable.png',
           url: 'https://github.com/bedekelly/elm-chat'
         },
         {
@@ -104,7 +104,7 @@ export default { sections: [
             in Elm.
           `,
           url: 'https://github.com/bedekelly/elm-chat',
-          image: 'https://s3.eu-west-2.amazonaws.com/static-electricity/images/elm/chat.png'
+          image: 'images/projects/EchoChamber.png'
         }
       ]
     },
@@ -118,7 +118,7 @@ export default { sections: [
         money or request information about my spending. Data is stored in a
         DynamoDB table and optionally written to a Google Sheets document.`,
         url: 'https://blog.bede.io/serverless-spending-tracker/',
-        image: 'https://s3.eu-west-2.amazonaws.com/static-electricity/images/python/budget.png'
+        image: 'images/projects/BudgetTracker.png'
       },
       {
         title: 'Web Crawler',
@@ -129,7 +129,7 @@ export default { sections: [
             cycles.
         `,
         url: 'https://github.com/bedekelly/crawler',
-        image: 'https://s3.eu-west-2.amazonaws.com/static-electricity/images/python/crawler.png'
+        image: 'images/projects/WebCrawler.png'
       },
       {
         title: 'Tinybuf',
@@ -138,7 +138,7 @@ export default { sections: [
             Cap'n Proto. When complete, it will be a highly efficient
             serialisation protocol for structured data into binary format.
         `,
-        image: 'https://s3.eu-west-2.amazonaws.com/static-electricity/images/python/tinybuf.png',
+        image: 'images/projects/TinyBuf.png',
         url: 'https://github.com/bedekelly/tinybuf'
       }
     ]
@@ -152,7 +152,7 @@ export default { sections: [
             I wrote a hashtable entirely in C, implementing table doubling to
             keep reads/writes at O(1). The code is performant and idiomatic C99.
           `,
-          image: 'https://public-static-electricity.s3.eu-west-2.amazonaws.com/Hashtables.png',
+          image: 'images/projects/Hashtables.png',
           url: 'https://blog.bede.io/hashtables-in-c-table-doubling/'
         },
         {
@@ -164,7 +164,7 @@ export default { sections: [
             stitch them together into an HD video.
           `,
           url: 'https://vimeo.com/240290765',
-          image: 'https://s3.eu-west-2.amazonaws.com/static-electricity/images/c/brot.png'
+          image: 'images/projects/MandelbrotZoom.png'
         },
         {
           title: 'Temperature Change Model',
@@ -176,7 +176,7 @@ export default { sections: [
             to show my results.
           `,
           url: 'https://github.com/bedekelly/time-series-prediction',
-          image: 'https://public-static-electricity.s3.eu-west-2.amazonaws.com/Genetic.png'
+          image: 'images/projects/TemperatureChangeModel.png'
         }
       ]
     },
@@ -192,7 +192,7 @@ export default { sections: [
             properties of code.
           `,
           url: 'https://github.com/bedekelly/minitools',
-          image: 'https://s3.eu-west-2.amazonaws.com/static-electricity/images/python/minitools.png'
+          image: 'images/projects/MiniTools.png'
         },
         {
           title: 'Magic Enum',
@@ -203,7 +203,7 @@ export default { sections: [
             specialised language features.
           `,
           url: 'https://github.com/bedekelly/magic-enum',
-          image: 'https://s3.eu-west-2.amazonaws.com/static-electricity/images/python/enum.png'
+          image: 'images/projects/MagicEnum.png'
         },
         {
           title: 'PySh',
@@ -214,7 +214,7 @@ export default { sections: [
             some metaprogramming is necessary here.
           `,
           url: 'https://github.com/bedekelly/pysh',
-          image: 'https://public-static-electricity.s3.eu-west-2.amazonaws.com/Pysh.png'
+          image: 'images/projects/PySh.png'
         }
       ]
     }

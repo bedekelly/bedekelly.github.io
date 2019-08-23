@@ -52,26 +52,23 @@ nav {
 a {
   text-decoration: none;
   color: var(--text);
+  transition: ease all 0.1s;
 }
 
 nav > a {
   margin-left: 10px;
   font-weight: 800;
   text-transform: uppercase;
-  transition: ease all 0.2s;
-}
-
-.blog-link:hover,
-.twitter-link:hover,
- li:nth-child(2n)>a:hover {
-  color: var(--accent1);
 }
 
 .home-link:hover,
+.blog-link:hover,
+.twitter-link:hover,
 .mail-link:hover,
 .cv-link:hover,
- li:nth-child(2n + 1)>a:hover {
+ a:hover {
   color: var(--accent2);
+  transition: ease all 0.1s;
 }
 
 .heading {
