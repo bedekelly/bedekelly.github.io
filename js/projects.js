@@ -4,6 +4,13 @@ import htm from './vendor/htm.module.js';
 const html = htm.bind(h);
 
 
+const preloadImages = projectsData.sections.map(
+  s => s.projects
+).flat().map(
+  p => p.image
+);
+
+
 function Project({project}) {
   const {title, description, url, image} = project;
 
@@ -51,11 +58,25 @@ class Section extends Component {
   }
 }
 
+// <link rel="preload" href=${image} as="image">
+function PreloadImage(image) {
+  return html`<link rel="preload" href=${image} as="image" />`
+}
+
+
+function PreloadImages({images}) {
+  return html`
+    ${images.map(PreloadImage)}
+  `
+}
+
+
 
 function Projects() {
   const sections = projectsData.sections;
 
   return html`
+      <${PreloadImages} images=${preloadImages} />
       ${ sections.map(section => html`<${Section} section=${section} />`) }
   `;
 }
