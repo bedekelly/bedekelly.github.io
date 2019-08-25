@@ -151,3 +151,9 @@ li > a {
   font-size: 12pt;
   font-family: "Arial", sans;
 }
+
+.keybase-link {
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-decoration-skip-ink: none;
+}
