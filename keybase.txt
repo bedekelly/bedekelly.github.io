@@ -1,0 +1,57 @@
+==================================================================
+https://keybase.io/bede
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://bede.io
+  * I am bede (https://keybase.io/bede) on keybase.
+  * I have a public key ASBUI24zY2Mkg9iaLpg7yeg3SQZS37nRZ3E3U_-rM3xM0wo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01015d0e7a350070951158f1c7b0e8afc5d24cc60ec6387fcbd2ebdcc4b592026da00a",
+      "host": "keybase.io",
+      "kid": "012054236e3363632483d89a2e983bc9e837490652dfb9d167713753ffab337c4cd30a",
+      "uid": "ca762fe6450bd5fbe1cff620d73c9919",
+      "username": "bede"
+    },
+    "merkle_root": {
+      "ctime": 1566762368,
+      "hash": "4a1e0bfd606b16f525e95e1025866b8735eae81e498395f83966af26cdd3103acad688a3d0ce1b34a67cb483f10c608667c2bd35520e4a04a71ccbcfa8ec246d",
+      "hash_meta": "d6dbd681f1e91d2a42a43c4e2592c5b8b32d4ad1e0545c109e4ddf26fc933afc",
+      "seqno": 6096655
+    },
+    "service": {
+      "entropy": "hiTXv5pJENlM/aXHahoUN6uQ",
+      "hostname": "bede.io",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "4.3.2"
+  },
+  "ctime": 1566762425,
+  "expire_in": 504576000,
+  "prev": "c967304ee1c4ff999e6d27f95a2245ef4e100c5226f3cad4249734c63c44dca0",
+  "seqno": 35,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgVCNuM2NjJIPYmi6YO8noN0kGUt+50WdxN1P/qzN8TNMKp3BheWxvYWTESpcCI8QgyWcwTuHE/5mebSf5WiJF704QDFIm88rUJJc0xjxE3KDEIP4ip8ZSJKVZJalVMWgwAx7/1GTom/U4kO6UAYX9LBs8AgHCo3NpZ8RADuMLs1+iHfODckPrzz8gqRvllq9AX3dmRVvVS1zxLaiU3feNh8k80+6q5tnMRACxCdWulgclaoqDTCjNHzndDahzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIKocrENE3oduhxt6SzCTWiNiy96rp7Lw8Uhtf7hwgjIVo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/bede
+
+==================================================================
+
