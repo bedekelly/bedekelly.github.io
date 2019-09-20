@@ -219,6 +219,10 @@ li.navigation > a {
   content: "\2013  ";  /* Equivalent to &ndash; */
 }
 
+.section-title:before {
+	width: 1.3ch;
+	display: inline-block;
+}
 
 @media (min-width: 700px) {
   .grid {
