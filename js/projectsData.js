@@ -75,7 +75,7 @@ export default { sections: [
       ]
     },
     {
-      title: 'Functional Programming',
+      title: 'Elm',
       projects: [
         {
           title: 'Budget Dashboard',
@@ -109,7 +109,7 @@ export default { sections: [
       ]
     },
   {
-    title: 'Backend',
+    title: 'Python',
     projects: [
       {
         title: 'Budget Tracker',
@@ -121,25 +121,26 @@ export default { sections: [
         image: 'images/projects/BudgetTracker.png'
       },
       {
-        title: 'Web Crawler',
-        description: `
-          As part of my interview process for a fintech company in London, I
-            wrote an idiomatic web crawler in Python. It produces a dictionary
-            of asset links, allows for a maximum recursion depth and detects
-            cycles.
-        `,
-        url: 'https://github.com/bedekelly/crawler',
-        image: 'images/projects/WebCrawler.png'
-      },
-      {
         title: 'Tinybuf',
         description: `
           Tinybuf is an ongoing project inspired by Google's ProtoBuf and
-            Cap'n Proto. When complete, it will be a highly efficient
-            serialisation protocol for structured data into binary format.
+            Cap'n Proto. It is an efficient serialisation protocol for 
+            structured data into binary format, allowing structure to be
+            defined from plain text files.
         `,
         image: 'images/projects/TinyBuf.png',
         url: 'https://github.com/bedekelly/tinybuf'
+      },
+
+      {
+        title: 'PySh',
+        description: `
+            This tool uses Python's dynamic nature to expose every command-line
+            tool on the user's machine as a function on an importable Python
+            module. Input, output and errors are all handled sanely.
+          `,
+        url: 'https://github.com/bedekelly/pysh',
+        image: 'images/projects/PySh.png'
       }
     ]
   },
@@ -181,7 +182,7 @@ export default { sections: [
       ]
     },
     {
-      title: 'Advanced Python',
+      title: 'Meta-programming',
       projects: [
         {
           title: 'Minitools',
@@ -206,15 +207,14 @@ export default { sections: [
           image: 'images/projects/MagicEnum.png'
         },
         {
-          title: 'PySh',
+          title: 'Monads and Do-Notation',
           description: `
-            This tool uses Python's dynamic nature to expose every command-line
-            tool on the user's machine as a function on an importable Python
-            module. Input, output and errors are all handled sanely. Again,
-            some metaprogramming is necessary here.
+            Haskell's do-notation transforms nested calls of the \`bind\`
+            function into readable, imperative-style code. Using bidirectional
+            generators as coroutines, I implement similar functionality in Python.
           `,
-          url: 'https://github.com/bedekelly/pysh',
-          image: 'images/projects/PySh.png'
+          url: 'https://github.com/bedekelly/monado',
+          image: 'images/projects/Monads.png'
         }
       ]
     }

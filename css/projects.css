@@ -135,13 +135,19 @@ section > p {
 }
 
 
+.contact-methods li {
+  display: inline;
+  margin: 7px 20px 7px 7px;
+}
+
+
 .findme {
   margin-bottom: 25px;
 }
 
-li.navigation > a {
-  font-size: 12pt;
-  font-family: "Arial", sans-serif;
+.contact-methods li > a {
+  font-size: 13pt;
+  font-family: "Arial", sans;
 }
 
 .project-title {
