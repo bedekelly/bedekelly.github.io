@@ -211,7 +211,10 @@ export default { sections: [
           description: `
             Haskell's do-notation transforms nested calls of the \`bind\`
             function into readable, imperative-style code. Using bidirectional
-            generators as coroutines, I implement similar functionality in Python.
+            generators as coroutines, I implemented similar functionality in Python
+            for arbitrary monads. This is a first-of-kind implementation which
+            works in regular modern Python code, unlike other attempts which rely
+            on outdated PyPy features.
           `,
           url: 'https://github.com/bedekelly/monado',
           image: 'images/projects/Monads.png'
