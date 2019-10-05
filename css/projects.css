@@ -52,7 +52,7 @@ nav {
 a {
   text-decoration: none;
   color: var(--text);
-  transition: ease all 0.1s;
+  transition: ease color 0.1s;
 }
 
 nav > a {
@@ -68,7 +68,7 @@ nav > a {
 .cv-link:hover,
  a:hover {
   color: var(--accent2);
-  transition: ease all 0.1s;
+  transition: ease color 0.1s;
 }
 
 .heading {
