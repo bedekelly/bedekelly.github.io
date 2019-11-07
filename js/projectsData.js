@@ -26,14 +26,13 @@ export default { sections: [
         image: 'images/projects/AnimatedSparkline.gif'
       },
       {
-        title: 'Gal',
+        title: 'Workshops',
         description: `
-          A simple, responsive image gallery, created with React and Python/Flask, 
-          which pregenerates blurred image previews to display while the main 
-          images are loading. Can be downloaded and run in a single line of code.
+          I've delivered multiple workshops (with excellent feedback) on JavaScript, React/Redux, Elm Architecture and Web Audio. 
+          As well as front-end topics I've also covered Python for web applications, using Redis pub/sub, and
+          NumPy for high performance numerical computing.
         `,
-        url: 'https://github.com/bedekelly/gal',
-        image: 'images/projects/Gal.png'
+        image: 'images/projects/Workshops.jpg'
       },
     ]
   },
@@ -75,7 +74,43 @@ export default { sections: [
       ]
     },
     {
-      title: 'Elm',
+      title: 'Python',
+      projects: [
+        {
+          title: 'Budget Tracker',
+          description: `To keep better track of my finances, I built a serverless budget
+        tracker using Python on AWS Lambda functions, called when I spend
+        money or request information about my spending. Data is stored in a
+        DynamoDB table and optionally written to a Google Sheets document.`,
+          url: 'https://blog.bede.io/serverless-spending-tracker/',
+          image: 'images/projects/BudgetTracker.png'
+        },
+        {
+          title: 'Tinybuf',
+          description: `
+          Tinybuf is an ongoing project inspired by Google's ProtoBuf and
+            Cap'n Proto. It is an efficient serialisation protocol for 
+            structured data into binary format, allowing structure to be
+            defined from plain text files.
+        `,
+          image: 'images/projects/TinyBuf.png',
+          url: 'https://github.com/bedekelly/tinybuf'
+        },
+
+        {
+          title: 'PySh',
+          description: `
+            This tool uses Python's dynamic nature to expose every command-line
+            tool on the user's machine as a function on an importable Python
+            module. Input, output and errors are all handled sanely.
+          `,
+          url: 'https://github.com/bedekelly/pysh',
+          image: 'images/projects/PySh.png'
+        }
+      ]
+    },
+    {
+      title: 'Elm-lang',
       projects: [
         {
           title: 'Budget Dashboard',
@@ -108,42 +143,6 @@ export default { sections: [
         }
       ]
     },
-  {
-    title: 'Python',
-    projects: [
-      {
-        title: 'Budget Tracker',
-        description: `To keep better track of my finances, I built a serverless budget
-        tracker using Python on AWS Lambda functions, called when I spend
-        money or request information about my spending. Data is stored in a
-        DynamoDB table and optionally written to a Google Sheets document.`,
-        url: 'https://blog.bede.io/serverless-spending-tracker/',
-        image: 'images/projects/BudgetTracker.png'
-      },
-      {
-        title: 'Tinybuf',
-        description: `
-          Tinybuf is an ongoing project inspired by Google's ProtoBuf and
-            Cap'n Proto. It is an efficient serialisation protocol for 
-            structured data into binary format, allowing structure to be
-            defined from plain text files.
-        `,
-        image: 'images/projects/TinyBuf.png',
-        url: 'https://github.com/bedekelly/tinybuf'
-      },
-
-      {
-        title: 'PySh',
-        description: `
-            This tool uses Python's dynamic nature to expose every command-line
-            tool on the user's machine as a function on an importable Python
-            module. Input, output and errors are all handled sanely.
-          `,
-        url: 'https://github.com/bedekelly/pysh',
-        image: 'images/projects/PySh.png'
-      }
-    ]
-  },
     {
       title: 'Native Code',
       projects: [
