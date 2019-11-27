@@ -1,4 +1,4 @@
-import projectsData from './projectsData.js';
+import projectsData from '/js/projectsData.js';
 import {h, render, Component} from './vendor/preact.module.js'
 import htm from './vendor/htm.module.js';
 const html = htm.bind(h);
@@ -58,7 +58,7 @@ class Section extends Component {
   }
 }
 
-// <link rel="preload" href=${image} as="image">
+
 function PreloadImage(image) {
   return html`<link rel="preload" href=${image} as="image" />`
 }
