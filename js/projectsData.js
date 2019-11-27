@@ -82,7 +82,7 @@ export default JSON.parse(`
           "title": "Smart Table",
           "description": "Also as part of the budget tracker, I built a searchable, sortable   table using Elm. The realtime updates are highly performant even in   tables of thousands of rows. ",
           "image": "images/projects/SmartTable.png",
-          "url": "https://github.com/bedekelly/elm-chat"
+          "url": "https://github.com/bedekelly/elm-table"
         },
         {
           "title": "Echo Chamber",
