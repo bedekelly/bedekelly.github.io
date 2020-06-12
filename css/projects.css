@@ -235,19 +235,19 @@ section > p {
     grid-template-areas: "description picture";
     grid-template-columns: 15fr 6fr;
   }
-  
+
   .project-image {
     width: 100%;
     height: auto;
     align-self: center;
   }
-  
+
   .project-title {
     font-size: calc(8pt + 1.2vw);
     margin-left: 0;
     margin-bottom: 0;
   }
-  
+
   .project-description {
     text-align: left;
     display: flex;
@@ -256,11 +256,11 @@ section > p {
     max-width: inherit;
     margin-right: 30px;
   }
-  
+
   .expanded > .section-title {
-    margin-bottom: 5vh; 
+    margin-bottom: 5vh;
   }
-  
+
   .project {
     margin-bottom: 5vh;
   }
@@ -289,4 +289,19 @@ img {
 
 .more-projects ul a {
   font-weight: bold;
+}
+
+
+.feature-video {
+  margin-top: 0.5em;
+  max-width: 80vmin;
+  max-height: 80vmin;
+}
+
+
+@media (min-width: 600px) {
+  .feature-video {
+    max-width: 60vmin;
+    max-height: 60vmin;
+  }
 }
