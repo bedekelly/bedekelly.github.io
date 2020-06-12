@@ -137,6 +137,15 @@ export default JSON.parse(`
           "image": "images/projects/Monads.png"
         }
       ]
+    },
+    {
+      "title": "RxJS",
+      "feature": {
+        "type": "video",
+        "url": "videos/rxjs-ajax.mp4",
+        "title": "Ajax Explainer",
+        "description": "A one-minute animated explainer video for the ajax function in RxJS. Animated with After Effects and recorded with Audition."
+      }
     }
   ]
 }

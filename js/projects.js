@@ -5,7 +5,7 @@ const html = htm.bind(h);
 
 
 const preloadImages = projectsData.sections.map(
-  s => s.projects
+  s => (s.projects || [])
 ).flat().map(
   p => p.image
 );
@@ -29,6 +29,20 @@ function Project({project}) {
 }
 
 
+function Feature({ type, url, title, description }) {
+  if (type === 'video') {
+    return html`
+      ${ title && html`<h3 class="project-title">${ title }</h3>` }
+      ${ description && html`<p>${ description }</p>` }
+      <video width="720" height="720" playsinline class="feature-video" controls>
+        <source src=${url} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+     `;
+  }
+  return html`<p>Feature type not found.</p>`;
+}
+
 
 class Section extends Component {
 
@@ -45,15 +59,18 @@ class Section extends Component {
   }
 
   render() {
-    const {section} = this.props;
-    const {title, projects} = section;
+    const { section } = this.props;
+    const { title, projects, feature } = section;
+    const contents = projects ?
+      projects.map(project => html`<${Project} project=${project}/>`)
+      : html`<${Feature} ...${feature} />`;
     const cssTitle = title.toLowerCase().replace(' ', '-');
     const { collapsed } = this.state;
     return html`<section class="${cssTitle} ${collapsed ? 'collapsed' : 'expanded'}">
       <h2 class="section-title" onClick=${() => this.setCollapsed(!collapsed)}>
           ${title}
        </h2>
-      ${collapsed ? null : projects.map(project => html`<${Project} project=${project}/>`)}
+      ${ collapsed ? null : contents }
      </section>`
   }
 }
