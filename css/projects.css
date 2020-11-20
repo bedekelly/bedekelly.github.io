@@ -166,7 +166,6 @@ section > p {
   padding-bottom: 0;
   max-width: 60vw;
   margin: 3vh auto;
-
 }
 
 .project-image {
@@ -231,7 +230,7 @@ section > p {
 }
 
 @media (min-width: 700px) {
-  .grid {
+  .project:not(.video-project)>.grid {
     grid-template-areas: "description picture";
     grid-template-columns: 15fr 6fr;
   }
@@ -299,9 +298,9 @@ img {
 }
 
 
-@media (min-width: 600px) {
+@media (min-width: 700px) {
   .feature-video {
-    max-width: 60vmin;
-    max-height: 60vmin;
+    width: 480px;
+    max-height: 480px;
   }
 }

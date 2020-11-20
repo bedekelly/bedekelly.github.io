@@ -8,21 +8,41 @@ const preloadImages = projectsData.sections.map(
   s => (s.projects || [])
 ).flat().map(
   p => p.image
-);
+).filter(link => !!link);
 
 
 function Project({project}) {
-  const {title, description, url, image} = project;
+  const {title, description, url, image, video, youtube, type} = project;
 
-  return html`<article class="project">
+  return html`<article class="project ${type}">
     <h3 class="project-title">${title}</h3>
     <div class="grid">
+    ${ image && html`
       <div class="left project-description">${description}</div>
       <div class="right">
         <a href="${url}">
           <img src=${image} alt="" class="project-image"/>
         </a>
+      </div>` }
+    ${ video && html`
+        <div class="left">
+            <video width="480" height="480" playsinline class="feature-video" controls>
+                <source src="${video}" type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="right project-description">
+          ${description}
+        </div>
+    ` }
+    ${ youtube && html`
+      <div class="left">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/${youtube}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
+      <div class="right project-description">
+        ${description}
+      </div>
+    ` }
     </div>
   </article>
   `
